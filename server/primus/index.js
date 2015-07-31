@@ -7,7 +7,7 @@ module.exports = function(app) {
         transformer: 'websockets'
     });
 
-    primus.save(path.join(app.ROOT, 'public_dist', 'primus.js'));
+    primus.save(path.join(app.ROOT, 'public', 'primus.js'));
 
     primus.on('connection', function(spark) {
         app.log.primus('websocket connection!');
