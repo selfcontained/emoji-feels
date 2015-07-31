@@ -1,0 +1,71 @@
+@keyframes emojistream {
+  0% {
+    left: 100%;
+    opacity: .75;
+  }
+  10% {
+      opacity: .05;
+  }
+  25% {
+      opacity: 1;
+  }
+  75% {
+      opacity: 1;
+  }
+  90% {
+      opacity: .75;
+  }
+  100% {
+    left: 0%;
+    opacity: 0;
+  }
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    font-family: 'Vollkorn', serif;
+}
+
+h1 {
+    text-align: center;
+    margin: 25px 0px 100px 0px;
+}
+
+.emojis {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background-color: #ddd;
+    border: solid 5px #ccc;
+}
+
+.emojis h4 {
+    text-align: center;
+    color: #000;
+}
+
+.emoji {
+    position: absolute;
+    left: -10000px;
+    font-size: 50px;
+    cursor: pointer;
+    animation: emojistream 5s;
+    animation-timing-function: ease-in;
+}
+
+.emoji-queue {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: #fff;
+}
+
+.emoji-fps {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    color: #fff;
+}
